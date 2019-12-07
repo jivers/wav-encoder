@@ -45,7 +45,7 @@ const whiteNoise1sec = {
 };
 
 WavEncoder.encode(whiteNoise1sec).then((buffer) => {
-  fs.writeFileSync("noise.wav", new Buffer(buffer));
+  fs.writeFileSync("noise.wav", Buffer.from(buffer));
 });
 ```
 
